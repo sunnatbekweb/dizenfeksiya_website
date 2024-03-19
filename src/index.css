@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SF Pro Display Regular";
+  src: url(./assets/fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+@font-face {
+  font-family: "SF Pro Display Medium";
+  src: url(./assets/fonts/SFPRODISPLAYMEDIUM.OTF);
+}
+
+@font-face {
+  font-family: "Unbounded Medium";
+  src: url(./assets/fonts/Unbounded-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Unbounded Semibold";
+  src: url(./assets/fonts/Unbounded-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Unbounded Bold";
+  src: url(./assets/fonts/Unbounded-Bold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

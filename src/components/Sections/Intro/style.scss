@@ -1,0 +1,177 @@
+section {
+    & .wrapper {
+        margin-top: 72px;
+        padding-top: 138px;
+        padding-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+
+        & .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & .top {
+                & h2 {
+                    max-width: 580px;
+                    color: #3375ff;
+                    font-family: "Unbounded Bold";
+                    font-size: 64px;
+                    font-weight: 700;
+                    line-height: 72px;
+                    text-align: left;
+                    margin-bottom: 32px;
+                }
+
+                & p {
+                    max-width: 300px;
+                    color: #676d83;
+                    font-family: "SF Pro Display Regular";
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                }
+            }
+
+            & .bottom {
+                display: flex;
+                align-items: center;
+                column-gap: 4px;
+
+                & button:nth-child(1) {
+                    width: 218px;
+                    height: 48px;
+                    display: grid;
+                    place-content: center;
+                    border-radius: 62px;
+                    background-color: #3375ff;
+                    color: rgb(255, 255, 255);
+                    font-family: "Unbounded Semibold";
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    letter-spacing: 0%;
+                    text-align: left;
+                }
+
+                & button:nth-child(2) {
+                    width: 80px;
+                    height: 48px;
+                    display: grid;
+                    place-content: center;
+                    border: 1px solid #cccccc;
+                    border-radius: 62px;
+                    background-color: #FFFFFF;
+                }
+            }
+        }
+
+        & .image {
+            border-radius: 16px;
+            position: relative;
+
+            & .intro_icon {
+                height: 240px;
+                position: absolute;
+                top: 117px;
+                left: -300px;
+            }
+
+            & .intro_image {
+                width: 674px;
+                height: 540px;
+                border-radius: 16px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    section {
+        background-image: url(../../../assets/images/disinfection-services.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+
+        & .wrapper {
+            padding: 20px;
+
+            & .text {
+                & .top {
+                    margin-bottom: 40px;
+
+                    & p {
+                        color: #1f2128;
+                    }
+                }
+            }
+
+            & .intro_image {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section {
+        & .wrapper {
+            & .text {
+                & .top {
+                    & h2 {
+                        font-size: 48px;
+                        line-height: 64px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    section {
+        & .wrapper {
+            & .text {
+                & .top {
+                    & h2 {
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+                }
+
+                & .bottom {
+                    & button:nth-child(1) {
+                        width: 180px;
+                        height: 36px;
+                    }
+
+                    & button:nth-child(2) {
+                        width: 60px;
+                        height: 36px;
+
+                        & svg {
+                            scale: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    section {
+        & .wrapper {
+            & .text {
+                & .top {
+                    & h2 {
+                        font-size: 32px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
