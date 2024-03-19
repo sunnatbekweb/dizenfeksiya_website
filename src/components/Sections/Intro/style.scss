@@ -1,4 +1,4 @@
-section {
+#intro {
     & .wrapper {
         margin-top: 72px;
         padding-top: 138px;
@@ -89,7 +89,7 @@ section {
 }
 
 @media screen and (max-width: 1100px) {
-    section {
+    #intro {
         background-image: url(../../../assets/images/disinfection-services.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -116,7 +116,7 @@ section {
 }
 
 @media screen and (max-width: 640px) {
-    section {
+    #intro {
         & .wrapper {
             & .text {
                 & .top {
@@ -131,7 +131,7 @@ section {
 }
 
 @media screen and (max-width: 475px) {
-    section {
+    #intro {
         & .wrapper {
             & .text {
                 & .top {
@@ -162,7 +162,7 @@ section {
 }
 
 @media screen and (max-width: 375px) {
-    section {
+    #intro {
         & .wrapper {
             & .text {
                 & .top {

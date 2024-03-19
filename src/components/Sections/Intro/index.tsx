@@ -4,7 +4,7 @@ import IntroIcon from "../../../assets/images/intro_image.png";
 
 const Intro = () => {
   return (
-    <section>
+    <section id="intro">
       <div className="wrapper">
         <div className="text">
           <div className="top">

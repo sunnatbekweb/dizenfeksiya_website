@@ -3,6 +3,7 @@ header {
     position: fixed;
     top: 0;
     background-color: #FFFFFF;
+    z-index: 99;
 
     & .header-container {
         max-width: 1360px;

@@ -1,0 +1,132 @@
+#advantages {
+    padding: 60px 0;
+
+    & .adv_wrapper {
+
+        & h2 {
+            color: #020c31;
+            font-family: "Unbounded Bold";
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 44px;
+            margin-bottom: 32px;
+        }
+
+        & .adv_card-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            justify-content: space-between;
+            column-gap: 10px;
+            padding: 32px 20px 0 20px;
+            border-top: 1px solid #cccccc;
+            margin-bottom: 96px;
+        }
+
+        & .clean_h {
+            padding: 60px 116px;
+            background-image: url(../../../assets/images/Cockroaches-and-Rabbits.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 16px;
+
+            & .clean_h-text {
+                margin-bottom: 136px;
+
+                & h3 {
+                    max-width: 560px;
+                    color: #fafafa;
+                    font-family: "Unbounded Bold";
+                    font-size: 40px;
+                    font-weight: 700;
+                    line-height: 48px;
+                    margin-bottom: 20px;
+                }
+
+                & p {
+                    max-width: 310px;
+                    color: #ffffff;
+                    font-family: "SF Pro Display Regular";
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: left;
+                }
+            }
+
+            & button {
+                width: 218px;
+                height: 48px;
+                display: grid;
+                place-content: center;
+                border-radius: 62px;
+                background-color: #3375ff;
+                color: rgb(255, 255, 255);
+                font-family: "Unbounded Semibold";
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 22px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 890px) {
+    #advantages {
+        & .adv_wrapper {
+            & .adv_card-wrapper {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                row-gap: 40px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #advantages {
+        & .adv_wrapper {
+            & h2 {
+                font-size: 36px;
+                margin-bottom: 24px;
+            }
+
+            & .clean_h {
+                padding: 50px 60px;
+
+                & .clean_h-text {
+                    margin-bottom: 90px;
+
+                    & h3 {
+                        font-size: 30px;
+                        line-height: 36px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #advantages {
+        & .adv_wrapper {
+            & h2 {
+                font-size: 24px;
+            }
+
+            & .adv_card-wrapper {
+                grid-template-columns: repeat(1, minmax(0, 1fr));
+            }
+
+            & .clean_h {
+                padding: 30px 20px;
+
+                & .clean_h-text {
+                    & h3 {
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
