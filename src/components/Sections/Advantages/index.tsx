@@ -2,7 +2,7 @@ import "./style.scss";
 import Rectangle1 from "../../../assets/images/Rectangle1.svg";
 import Rectangle2 from "../../../assets/images/Rectangle2.svg";
 import Rectangle3 from "../../../assets/images/Rectangle3.svg";
-import Card from "../../Card";
+import Card from "../../Cards/AboutCard";
 
 const Advantages = () => {
   interface Item {
