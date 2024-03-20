@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Sections from "./components/Sections";
 
@@ -8,6 +9,7 @@ function App() {
       <div className="container">
         <Sections />
       </div>
+      <Footer />
     </>
   );
 }

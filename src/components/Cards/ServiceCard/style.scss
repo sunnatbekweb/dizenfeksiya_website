@@ -1,7 +1,7 @@
 .service_card {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 20px 10px;
     border: 2.3px solid #020c315d;
     border-radius: 20px;
@@ -9,5 +9,65 @@
     & img {
         width: 300px;
         height: 300px;
+    }
+
+    & .service_card-text {
+        max-width: 900px;
+
+        & h4 {
+            color: #020c31;
+            font-family: "Unbounded Bold";
+            font-size: 24px;
+            font-weight: 700;
+            line-height: normal;
+            padding: 0 10px
+        }
+
+        & p {
+            color: #495157;
+            font-family: "Unbounded Medium";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-top: 20px;
+            padding: 0 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .service_card {
+        // display: block;
+        flex-direction: column;
+
+        & .service_card-text {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service_card {
+        & img {
+            width: 200px;
+            height: 200px;
+        }
+
+        & .service_card-text {
+            & p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .service_card {
+        & .service_card-text {
+            & h4 {
+                font-size: 20px;
+            }
+        }
     }
 }
