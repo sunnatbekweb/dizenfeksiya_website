@@ -3,13 +3,21 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import "./style.scss";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Faq = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
   return (
     <section id="faq">
       <div className="faq_wrapper">
-        <h2>FAQ</h2>
-        <div className="accordion">
+        <h2 data-aos="fade-right">FAQ</h2>
+        <div className="accordion" data-aos="fade-left">
           <Accordion>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}

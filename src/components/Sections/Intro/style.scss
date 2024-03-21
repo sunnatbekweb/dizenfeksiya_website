@@ -9,9 +9,10 @@
         & .text {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
 
             & .top {
+                margin-bottom: 120px;
+
                 & h2 {
                     max-width: 580px;
                     color: #3375ff;
@@ -102,8 +103,12 @@
                 & .top {
                     margin-bottom: 40px;
 
+                    & h2 {
+                        color: #FFFFFF;
+                    }
+
                     & p {
-                        color: #1f2128;
+                        color: #FFFFFF;
                     }
                 }
             }

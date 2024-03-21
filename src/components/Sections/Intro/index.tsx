@@ -1,21 +1,32 @@
+import { useEffect } from "react";
 import "./style.scss";
 import IntroImage from "../../../assets/images/disinfection-services.jpg";
 import IntroIcon from "../../../assets/images/intro_image.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Intro = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <section id="intro">
-      <div className="wrapper">
+      <div className="wrapper" data-aos="fade-left">
         <div className="text">
-          <div className="top">
+          <div className="top" data-aos="fade-right">
             <h2>Dizenfeksiya xizmati</h2>
             <p>
               Bizning ko’p yillardan beri o’z faoliyatini olib kelayotgan
               kompaniyamiz Mijozlarimiz bizdan mamnun
             </p>
           </div>
-          <div className="bottom">
-            <button>Bog'lanish</button>
+          <div className="bottom" data-aos="fade-up-right">
+            <button>
+              <a href="#contact">Bog'lanish</a>
+            </button>
             <button>
               <svg
                 width="28"
@@ -33,7 +44,7 @@ const Intro = () => {
             </button>
           </div>
         </div>
-        <div className="image">
+        <div className="image" data-aos="fade-left">
           <img className="intro_icon" src={IntroIcon} alt="Intro icon" />
           <img className="intro_image" src={IntroImage} alt="Intro image" />
         </div>

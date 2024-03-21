@@ -22,8 +22,6 @@ header {
                 color: #04009a;
             }
 
-
-
             & .nav {
                 display: flex;
                 align-items: center;
@@ -64,19 +62,18 @@ header {
                 }
 
                 & .auth_btn {
-                    width: 190px;
-                    height: 36px;
-                    border-radius: 20px;
-                    border: transparent;
-                    background-color: #5356FF;
+                    width: 218px;
+                    height: 48px;
+                    display: grid;
+                    place-content: center;
+                    border-radius: 62px;
+                    background-color: #3375ff;
                     color: rgb(255, 255, 255);
-                    font-family: "Unbounded Medium";
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 24px;
-                    letter-spacing: 0%;
-                    text-transform: capitalize;
-                    cursor: pointer;
+                    font-family: "Unbounded Semibold";
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 22px;
+                    text-align: left;
                 }
             }
 
@@ -88,6 +85,47 @@ header {
         }
 
     }
+}
+
+.d_list {
+    margin-bottom: 40px;
+}
+
+#lang1 {
+    border: 2px solid #000000a6;
+    border-radius: 10px;
+    font-family: "SF Pro Display Regular";
+    font-size: 16px;
+    color: #000000a6;
+    padding: 5px 7px;
+    margin: 0 auto;
+    display: none;
+}
+
+.drawer_link {
+    color: rgb(102, 102, 102);
+    font-family: "SF Pro Display Regular";
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.auth_btn_d {
+    width: 218px;
+    height: 48px;
+    display: grid;
+    place-content: center;
+    border-radius: 62px;
+    background-color: #3375ff;
+    color: #ffffff;
+    font-family: "Unbounded Semibold";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 40px auto;
+    display: none;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -118,7 +156,6 @@ header {
                     }
                 }
             }
-
         }
     }
 }
@@ -139,6 +176,10 @@ header {
             }
         }
     }
+
+    .auth_btn_d {
+        display: block;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -156,5 +197,9 @@ header {
                 }
             }
         }
+    }
+
+    #lang1 {
+        display: block;
     }
 }

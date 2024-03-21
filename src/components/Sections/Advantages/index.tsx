@@ -1,10 +1,19 @@
+import { useEffect } from "react";
 import "./style.scss";
 import Rectangle1 from "../../../assets/images/Rectangle1.svg";
 import Rectangle2 from "../../../assets/images/Rectangle2.svg";
 import Rectangle3 from "../../../assets/images/Rectangle3.svg";
 import Card from "../../Cards/AboutCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Advantages = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   interface Item {
     image: string;
     title: string;
@@ -30,7 +39,9 @@ const Advantages = () => {
   return (
     <section id="advantages">
       <div className="adv_wrapper">
-        <h2 className="adv_title">Avfzalliklarimiz</h2>
+        <h2 className="adv_title" data-aos="zoom-in-right">
+          Avfzalliklarimiz
+        </h2>
 
         <div className="adv_card-wrapper">
           {data.map((item: Item, index: number) => (
@@ -45,13 +56,17 @@ const Advantages = () => {
 
         <div className="clean_h">
           <div className="clean_h-text">
-            <h3>Klapa va zararli hashorot endi yo’q deb hisoblang !!!</h3>
-            <p>
+            <h3 data-aos="fade-right">
+              Klapa va zararli hashorot endi yo’q deb hisoblang !!!
+            </h3>
+            <p data-aos="flip-down">
               Bizning ko’p yillardan beri o’z faoliyatini olib kelayotgan
               kompaniyamiz Mijozlarimiz bizdan mamnun
             </p>
           </div>
-          <button>Bog'lanish</button>
+          <button data-aos="flip-up">
+            <a href="#contact">Bog'lanish</a>
+          </button>
         </div>
       </div>
     </section>

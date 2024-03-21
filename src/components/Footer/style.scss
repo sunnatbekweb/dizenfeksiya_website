@@ -1,9 +1,10 @@
 footer {
     padding: 60px 0;
+    margin-bottom: 40px;
 
     .f-top {
         display: flex;
-        column-gap: 107px;
+        justify-content: space-around;
 
         & h2 {
             font-size: 24px;
@@ -39,26 +40,27 @@ footer {
                     border-radius: 8px;
                 }
             }
+        }
+    }
 
-            & .social {
-                display: flex;
-                row-gap: 16px;
-                column-gap: 16px;
-                padding-top: 32px;
-                margin-top: 32px;
-                border-top: 1px solid rgb(204, 204, 204);
+    & .social {
+        display: flex;
+        justify-content: space-evenly;
+        row-gap: 16px;
+        column-gap: 16px;
+        padding-top: 32px;
+        margin-top: 32px;
+        border-top: 1px solid rgb(204, 204, 204);
 
-                & a {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 12px;
-                    width: 330px;
-                    column-gap: 16px;
-                    border-radius: 30px;
-                    background: rgb(242, 242, 242);
-                }
-            }
+        & a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            width: 330px;
+            column-gap: 16px;
+            border-radius: 30px;
+            background: rgb(242, 242, 242);
         }
     }
 }
@@ -70,12 +72,6 @@ footer {
             & h2 {
                 margin-bottom: 32px;
             }
-
-            & .top-right {
-                & .social {
-                    flex-direction: column;
-                }
-            }
         }
     }
 }
@@ -89,26 +85,12 @@ footer {
                 margin-bottom: 32px;
             }
         }
-    }
-}
 
-@media screen and (max-width: 640px) {
-    footer {
-        padding: 30px 0;
-
-        & .f-top {
+        & .social {
             flex-direction: column;
 
-            & h2 {
-                margin-bottom: 32px;
-            }
-
-            & .top-right {
-                & .social {
-                    & a {
-                        width: 100%;
-                    }
-                }
+            & a {
+                width: 100%;
             }
         }
     }

@@ -5,8 +5,16 @@ import Desinfection3 from "../../../assets/images/derazatsiya-3.png";
 import ServiceCard from "../../Cards/ServiceCard";
 import ServiceImg from "../../../assets/images/service_img.jpeg";
 import serviceIcon from "../../../assets/images/3dicon.svg";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Service = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   interface Item {
     image: string;
     title: string;
@@ -33,8 +41,8 @@ const Service = () => {
   return (
     <section id="service">
       <div className="service_wrapper">
-        <h2>Xizmatlar</h2>
-        <p className="service_text">
+        <h2 data-aos="fade-right">Xizmatlar</h2>
+        <p className="service_text" data-aos="flip-left">
           Biz sizga samarali va kafolatle yordam taklif etamiz.
         </p>
 
@@ -50,18 +58,25 @@ const Service = () => {
         </div>
 
         <div className="service_end">
-          <img className="left_img" src={ServiceImg} alt="Service image" />
+          <img
+            className="left_img"
+            data-aos="zoom-in"
+            src={ServiceImg}
+            alt="Service image"
+          />
 
           <div className="right_end">
             <div className="right_top">
-              <img src={serviceIcon} alt="Service icon" />
-              <h5>
+              <img src={serviceIcon} alt="Service icon" data-aos="zoom-out" />
+              <h5 data-aos="fade-left">
                 Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
                 talaygina
               </h5>
             </div>
 
-            <button>Bo'glanish</button>
+            <button data-aos="flip-down">
+              <a href="#contact">Bog'lanish</a>
+            </button>
           </div>
         </div>
       </div>

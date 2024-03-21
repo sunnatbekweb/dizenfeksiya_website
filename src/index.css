@@ -33,6 +33,11 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
 .container {
   max-width: 1360px;
   margin: 0 auto;

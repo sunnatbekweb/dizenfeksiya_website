@@ -6,13 +6,14 @@
         border-radius: 12px;
         background-image: url(../../../assets/images/doctor.png), radial-gradient(circle, rgba(83, 86, 255, 1) 0%, rgba(103, 198, 227, 1) 65%);
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: 85%;
         background-size: contain;
         background-color: rgb(83, 86, 255);
 
         & .form {
             max-width: 456px;
             padding: 28px 24px;
+            margin-left: 180px;
             border-radius: 8px;
             background-color: #fff;
 
@@ -58,6 +59,7 @@
 
             & .form {
                 max-width: 100%;
+                margin-left: 0;
             }
         }
     }
