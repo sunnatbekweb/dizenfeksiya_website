@@ -1,5 +1,5 @@
 import "./style.scss";
-import * as React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -28,10 +28,14 @@ i18next
 
 const Header = () => {
   const { t } = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>(
+    i18next.language
+  );
 
   const changeLanguage = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLanguage = event.target.value;
     i18next.changeLanguage(selectedLanguage);
+    setSelectedLanguage(selectedLanguage);
   };
 
   const [state, setState] = React.useState({
@@ -75,39 +79,44 @@ const Header = () => {
             onClick={toggleDrawer(anchor, false)}
             className="drawer_link"
           >
-            <ListItemButton>{t("service")}</ListItemButton>
+            <ListItemButton>{t("about")}</ListItemButton>
           </a>
           <a
             href="#service"
             onClick={toggleDrawer(anchor, false)}
             className="drawer_link"
           >
-            <ListItemButton>Xizmatlar</ListItemButton>
+            <ListItemButton>{t("service")}</ListItemButton>
           </a>
           <a
             href="#faq"
             onClick={toggleDrawer(anchor, false)}
             className="drawer_link"
           >
-            <ListItemButton>Faq</ListItemButton>
+            <ListItemButton>{t("faq")}</ListItemButton>
           </a>
           <a
             href="#contact"
             onClick={toggleDrawer(anchor, false)}
             className="drawer_link"
           >
-            <ListItemButton>Contact</ListItemButton>
+            <ListItemButton>{t("contact")}</ListItemButton>
           </a>
         </div>
 
-        <select name="language" id="lang1">
+        <select
+          name="language"
+          id="lang1"
+          onChange={changeLanguage}
+          value={selectedLanguage}
+        >
           <option value="uz">Uzbekcha</option>
           <option value="ru">Русский</option>
         </select>
 
         <a href="#contact" className="text-center">
           <button className="auth_btn_d" onClick={toggleDrawer(anchor, false)}>
-            Bog'lanish
+            {t("button")}
           </button>
         </a>
       </List>
@@ -130,30 +139,35 @@ const Header = () => {
               </li>
               <li className="nav_list-item">
                 <a href="#service" className="nav__list--item-link">
-                  Xizmatlar
+                  {t("service")}
                 </a>
               </li>
               <li className="nav_list-item">
                 <a href="#faq" className="nav__list--item-link">
-                  Faq
+                  {t("faq")}
                 </a>
               </li>
               <li className="nav_list-item">
                 <a href="#contact" className="nav__list--item-link">
-                  Contact
+                  {t("contact")}
                 </a>
               </li>
             </ul>
           </nav>
 
           <div className="header-buttons">
-            <select name="language" id="lang" onChange={changeLanguage}>
+            <select
+              name="language"
+              id="lang"
+              onChange={changeLanguage}
+              value={selectedLanguage}
+            >
               <option value="uz">Uzbekcha</option>
               <option value="ru">Русский</option>
             </select>
 
             <button className="auth_btn">
-              <a href="#contact">Bog'lanish</a>
+              <a href="#contact">{t("button")}</a>
             </button>
 
             <button className="header_menu-btn">

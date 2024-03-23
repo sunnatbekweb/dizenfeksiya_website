@@ -4,6 +4,25 @@ import IntroImage from "../../../assets/images/disinfection-services.jpg";
 import IntroIcon from "../../../assets/images/intro_image.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import i18next from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import ruTranslation from "../../../../public/locales/ru.json";
+import uzTranslation from "../../../../public/locales/uz.json";
+import LanguageDetector from "i18next-browser-languagedetector";
+import Backend from "i18next-http-backend";
+
+i18next
+  .use(Backend)
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    resources: {
+      uz: { translation: uzTranslation },
+      ru: { translation: ruTranslation },
+    },
+    fallbackLng: "uz",
+    interpolation: { escapeValue: false },
+  });
 
 const Intro = () => {
   useEffect(() => {
@@ -12,20 +31,19 @@ const Intro = () => {
     });
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <section id="intro">
       <div className="wrapper" data-aos="fade-left">
         <div className="text">
           <div className="top" data-aos="fade-right">
-            <h2>Dizenfeksiya xizmati</h2>
-            <p>
-              Bizning ko’p yillardan beri o’z faoliyatini olib kelayotgan
-              kompaniyamiz Mijozlarimiz bizdan mamnun
-            </p>
+            <h2>{t("introTitle")}</h2>
+            <p>{t("advCardText")}</p>
           </div>
           <div className="bottom" data-aos="fade-up-right">
             <button>
-              <a href="#contact">Bog'lanish</a>
+              <a href="#contact">{t("button")}</a>
             </button>
             <button>
               <svg
@@ -38,7 +56,7 @@ const Intro = () => {
                 <path
                   d="M26 26V2M26 2H2M26 2L2 26"
                   stroke="#1D68F9"
-                  stroke-width="3"
+                  strokeWidth="3"
                 />
               </svg>
             </button>

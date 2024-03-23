@@ -8,8 +8,29 @@ import serviceIcon from "../../../assets/images/3dicon.svg";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import i18next from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import ruTranslation from "../../../../public/locales/ru.json";
+import uzTranslation from "../../../../public/locales/uz.json";
+import LanguageDetector from "i18next-browser-languagedetector";
+import Backend from "i18next-http-backend";
+
+i18next
+  .use(Backend)
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    resources: {
+      uz: { translation: uzTranslation },
+      ru: { translation: ruTranslation },
+    },
+    fallbackLng: "uz",
+    interpolation: { escapeValue: false },
+  });
 
 const Service = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -23,27 +44,27 @@ const Service = () => {
   const data: Item[] = [
     {
       image: Desinfection1,
-      title: "Dezinfektsiya - zararli mikroorganizmlarni yo'q qilish ",
-      text: "Ҳар қандай дезинфексиянинг асосий вазифаси инфексиялар ва касалликларга олиб келиши мумкин бўлган хавфли микроорганизмларни йўқ қилишдир. Дезинфексия чоралари бўш жойни моғор, вирус, чириётган ва бактериялардан тозалайди. Жараён атроф-муҳитни патоген организмлардан тозалайди.Агар ўзингизни ёмон ҳис қилсангиз, чарчоқ ёки сабабсиз заифлашсангиз керак.",
+      title: `${t("serviceTitle1")}`,
+      text: `${t("serviceText1")}`,
     },
     {
       image: Desinfection2,
-      title: "Dezinseksiya - umumiy disinseksiya",
-      text: "Кўп одамлар биринчи навбатда 'дезинфестатсия' сўзини исталмаган қўшниларидан - чойшаблар, ҳамамбöcеклер, чумолилар ва бошқа ҳашаротлардан халос бўлиш ёлини қидирганда дуч келишади. Уларнинг ўзлари йўқимсиз ва улар ҳам маълум инфектсия ташувчилари. Дезинсексия - бу ҳашаротларни: чивинлар, чивинлар, чойшаблар, тараканлар, куя, шомил, қобиқ қўнғизлари, ёғоч битлари ва бошқа судралиб юрувчи ва учувчи жонзотларни йўқ қилиш. ",
+      title: `${t("serviceTitle2")}`,
+      text: `${t("serviceText2")}`,
     },
     {
       image: Desinfection3,
-      title: "Deratizatsiya - kemiruvchilarni yo'q qilish",
-      text: "Toshkentda deratizatsya kemiruvchilarni yo'q qilishga qaratilgan kompleks chora-tadbirlarning butun majmuasidir. Maulukki, kemiruvchilar juda ⱨattiⱨ zhonzotlar bo'lib, ular turli tizma havfli taisirlarga dosh beradilar. Shu uchun ularni yo'q qilish uchun bir qator usullardan foydalanish kerak. Deratizatsiya Toshkent shaҳrida kemiruvchilar paydo boʻlgan zhoilarda: коʻp qavatli uylar, omborlar, do'konlar, umumiy ovqatlanish korhonalari amalga oshiriladi.",
+      title: `${t("serviceTitle3")}`,
+      text: `${t("serviceText3")}`,
     },
   ];
 
   return (
     <section id="service">
       <div className="service_wrapper">
-        <h2 data-aos="fade-right">Xizmatlar</h2>
+        <h2 data-aos="fade-right">{t("service")}</h2>
         <p className="service_text" data-aos="flip-left">
-          Biz sizga samarali va kafolatle yordam taklif etamiz.
+          {t("pod")}
         </p>
 
         <div className="service_card_wrapper">
@@ -68,14 +89,11 @@ const Service = () => {
           <div className="right_end">
             <div className="right_top">
               <img src={serviceIcon} alt="Service icon" data-aos="zoom-out" />
-              <h5 data-aos="fade-left">
-                Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
-                talaygina
-              </h5>
+              <h5 data-aos="fade-left">{t("advCardText")}</h5>
             </div>
 
             <button data-aos="flip-down">
-              <a href="#contact">Bog'lanish</a>
+              <a href="#contact">{t("button")}</a>
             </button>
           </div>
         </div>

@@ -6,8 +6,29 @@ import Rectangle3 from "../../../assets/images/Rectangle3.svg";
 import Card from "../../Cards/AboutCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import i18next from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+import ruTranslation from "../../../../public/locales/ru.json";
+import uzTranslation from "../../../../public/locales/uz.json";
+import LanguageDetector from "i18next-browser-languagedetector";
+import Backend from "i18next-http-backend";
+
+i18next
+  .use(Backend)
+  .use(initReactI18next)
+  .use(LanguageDetector)
+  .init({
+    resources: {
+      uz: { translation: uzTranslation },
+      ru: { translation: ruTranslation },
+    },
+    fallbackLng: "uz",
+    interpolation: { escapeValue: false },
+  });
 
 const Advantages = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -22,25 +43,25 @@ const Advantages = () => {
   const data: Item[] = [
     {
       image: Rectangle1,
-      title: "Tezda xizmat ko'rsatish",
-      text: "Bizning ko'p yillardan beri o'z faoliyatini olib kelayotgan kompaniyamiz Mijozlarimiz bizdan mamnun",
+      title: `${t("fastservice")}`,
+      text: `${t("advCardText")}`,
     },
     {
       image: Rectangle2,
-      title: "Yetuk mutahasislaimiz",
-      text: "Bizning ko'p yillardan beri o'z faoliyatini olib kelayotgan kompaniyamiz Mijozlarimiz bizdan mamnun",
+      title: `${t("workers")}`,
+      text: `${t("advCardText")}`,
     },
     {
       image: Rectangle3,
-      title: "Sizga maqul vaqtda",
-      text: "Bizning ko'p yillardan beri o'z faoliyatini olib kelayotgan kompaniyamiz Mijozlarimiz bizdan mamnun",
+      title: `${t("advTime")}`,
+      text: `${t("advCardText")}`,
     },
   ];
   return (
     <section id="advantages">
       <div className="adv_wrapper">
         <h2 className="adv_title" data-aos="zoom-in-right">
-          Avfzalliklarimiz
+          {t("advantage")}
         </h2>
 
         <div className="adv_card-wrapper">
@@ -56,16 +77,11 @@ const Advantages = () => {
 
         <div className="clean_h">
           <div className="clean_h-text">
-            <h3 data-aos="fade-right">
-              Klapa va zararli hashorot endi yo’q deb hisoblang !!!
-            </h3>
-            <p data-aos="flip-down">
-              Bizning ko’p yillardan beri o’z faoliyatini olib kelayotgan
-              kompaniyamiz Mijozlarimiz bizdan mamnun
-            </p>
+            <h3 data-aos="fade-right">{t("advBanner")}</h3>
+            <p data-aos="flip-down">{t("advCardText")}</p>
           </div>
           <button data-aos="flip-up">
-            <a href="#contact">Bog'lanish</a>
+            <a href="#contact">{t("button")}</a>
           </button>
         </div>
       </div>

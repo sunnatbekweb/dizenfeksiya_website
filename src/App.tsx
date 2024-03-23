@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Sections from "./components/Sections";
 import AOS from "aos";
 import "aos/dist/aos.css";
+ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   useEffect(() => {
