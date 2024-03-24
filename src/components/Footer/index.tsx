@@ -56,16 +56,16 @@ const Footer = () => {
           </div>
         </div>
         <div className="social">
-          <a href="">
+          <a href="https://www.facebook.com/OrkinCanada/">
             <span>Facebook</span>
             <img src={Vector} alt="Arrow icon" />
           </a>
-          <a href="">
+          <a href="https://www.instagram.com/orkincanada/">
             <span>Instagram</span>
             <img src={Vector} alt="Arrow icon" />
           </a>
-          <a href="">
-            <span>Telegram</span>
+          <a href="https://twitter.com/orkincanada/">
+            <span>Twitter</span>
             <img src={Vector} alt="Arrow icon" />
           </a>
         </div>

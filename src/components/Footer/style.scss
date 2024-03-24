@@ -64,10 +64,23 @@ footer {
             border-radius: 30px;
             background: rgb(242, 242, 242);
             transition: all 0.3s ease;
+        }
 
-            &:hover {
-                background-color: #87da8d;
-            }
+        & a:nth-child(1):hover {
+            background-color: #1877F2;
+            color: #ffffff;
+        }
+
+        & a:nth-child(2):hover {
+            background: #833ab4;
+            background: linear-gradient(to right,
+                    #833ab4, #fd1d1d, #fcb045);
+            color: #ffffff;
+        }
+
+        & a:nth-child(3):hover {
+            background-color: #00ACEE;
+            color: #ffffff;
         }
     }
 }
