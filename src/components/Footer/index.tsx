@@ -43,6 +43,7 @@ const Footer = () => {
             <a
               href="https://maps.app.goo.gl/UccbMo4NsbSYm5hT8"
               className="location"
+              target="_blank"
             >
               <i className="bx bx-location-plus"></i>
               <p>{t("address")}</p>
@@ -56,15 +57,15 @@ const Footer = () => {
           </div>
         </div>
         <div className="social">
-          <a href="https://www.facebook.com/OrkinCanada/">
+          <a href="https://www.facebook.com/OrkinCanada/" target="_blank">
             <span>Facebook</span>
             <img src={Vector} alt="Arrow icon" />
           </a>
-          <a href="https://www.instagram.com/orkincanada/">
+          <a href="https://www.instagram.com/orkincanada/" target="_blank">
             <span>Instagram</span>
             <img src={Vector} alt="Arrow icon" />
           </a>
-          <a href="https://twitter.com/orkincanada/">
+          <a href="https://twitter.com/orkincanada/" target="_blank">
             <span>Twitter</span>
             <img src={Vector} alt="Arrow icon" />
           </a>
