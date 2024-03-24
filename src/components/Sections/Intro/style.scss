@@ -15,7 +15,7 @@
 
                 & h2 {
                     max-width: 580px;
-                    color: #3375ff;
+                    color: #68BC6E;
                     font-family: "Unbounded Bold";
                     font-size: 64px;
                     font-weight: 700;
@@ -40,30 +40,52 @@
                 align-items: center;
                 column-gap: 4px;
 
-                & button:nth-child(1) {
-                    width: 218px;
-                    height: 48px;
-                    display: grid;
-                    place-content: center;
-                    border-radius: 62px;
-                    background-color: #3375ff;
-                    color: rgb(255, 255, 255);
-                    font-family: "Unbounded Semibold";
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 22px;
-                    letter-spacing: 0%;
-                    text-align: left;
+                & .btn_t {
+                    & button {
+                        width: 218px;
+                        height: 48px;
+                        display: grid;
+                        place-content: center;
+                        border-radius: 62px;
+                        background-color: #68BC6E;
+                        color: #ffffff;
+                        font-family: "Unbounded Semibold";
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 22px;
+                        letter-spacing: 0%;
+                        text-align: left;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background-color: #428546;
+                        }
+
+                        &:active {
+                            background-color: #68bc6ea7;
+                        }
+                    }
                 }
 
-                & button:nth-child(2) {
-                    width: 80px;
-                    height: 48px;
-                    display: grid;
-                    place-content: center;
-                    border: 1px solid #cccccc;
-                    border-radius: 62px;
-                    background-color: #FFFFFF;
+                & .btn_i {
+                    & button {
+                        width: 80px;
+                        height: 48px;
+                        display: grid;
+                        place-content: center;
+                        border: 1px solid #cccccc;
+                        border-radius: 62px;
+                        background-color: #FFFFFF;
+                        transition: all 0.3s ease;
+
+                        &:hover {
+                            background-color: #cccccc;
+                        }
+
+                        &:active {
+                            background-color: #68bc6e3e;
+                        }
+                    }
                 }
             }
         }
@@ -75,8 +97,8 @@
             & .intro_icon {
                 height: 240px;
                 position: absolute;
-                top: 117px;
-                left: -300px;
+                top: 140px;
+                left: -340px;
             }
 
             & .intro_image {
@@ -97,7 +119,10 @@
         border-radius: 20px;
 
         & .wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+            margin-top: 84px;
             padding: 20px;
+            border-radius: 20px;
 
             & .text {
                 & .top {
@@ -113,7 +138,8 @@
                 }
             }
 
-            & .intro_image {
+            & .intro_image,
+            .intro_icon {
                 display: none;
             }
         }
@@ -147,17 +173,21 @@
                 }
 
                 & .bottom {
-                    & button:nth-child(1) {
-                        width: 180px;
-                        height: 36px;
+                    & .btn_t {
+                        & button {
+                            width: 180px;
+                            height: 36px;
+                        }
                     }
 
-                    & button:nth-child(2) {
-                        width: 60px;
-                        height: 36px;
+                    & .btn_i {
+                        & button {
+                            width: 60px;
+                            height: 36px;
 
-                        & svg {
-                            scale: 80%;
+                            & svg {
+                                scale: 80%;
+                            }
                         }
                     }
                 }

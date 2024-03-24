@@ -7,10 +7,12 @@ footer {
         justify-content: space-around;
 
         & h2 {
-            font-size: 24px;
-            font-family: "Unbounded Bold";
-            text-decoration: none;
-            color: #04009a;
+            width: 120px;
+
+            & img {
+                width: 100%;
+                height: 48px;
+            }
         }
 
         & .top-right {
@@ -61,6 +63,11 @@ footer {
             column-gap: 16px;
             border-radius: 30px;
             background: rgb(242, 242, 242);
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #87da8d;
+            }
         }
     }
 }

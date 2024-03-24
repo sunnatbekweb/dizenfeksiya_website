@@ -5,6 +5,8 @@
     padding: 20px 10px;
     border: 2.3px solid #020c315d;
     border-radius: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 138, 138, 1) 100%);
 
     & img {
         width: 300px;
@@ -38,7 +40,6 @@
 
 @media screen and (max-width: 960px) {
     .service_card {
-        // display: block;
         flex-direction: column;
 
         & .service_card-text {

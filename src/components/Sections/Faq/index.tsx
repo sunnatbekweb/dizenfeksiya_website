@@ -45,13 +45,9 @@ const Faq = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              Zararkurandalarni yo'q qilish qanday amalga oshiriladi
+              {t("ftitle1")}
             </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </AccordionDetails>
+            <AccordionDetails>{t("ftext1")}</AccordionDetails>
           </Accordion>
           <Accordion>
             <AccordionSummary
@@ -59,13 +55,9 @@ const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              Siz foydalanadigan dorilar xavflimi?
+              {t("ftitle2")}
             </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </AccordionDetails>
+            <AccordionDetails>{t("ftext2")}</AccordionDetails>
           </Accordion>
           <Accordion>
             <AccordionSummary
@@ -73,13 +65,9 @@ const Faq = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              Menga uyimni davolashga tayyorlanishning qandaydir usuli kerakmi?
+              {t("ftitle3")}
             </AccordionSummary>
-            <AccordionDetails>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </AccordionDetails>
+            <AccordionDetails>{t("ftext3")}</AccordionDetails>
           </Accordion>
         </div>
       </div>

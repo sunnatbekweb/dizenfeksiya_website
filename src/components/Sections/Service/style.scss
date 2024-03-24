@@ -34,8 +34,8 @@
             padding: 32px;
             column-gap: 40px;
             border-radius: 16px;
-            background: rgb(83, 86, 255);
-            background: linear-gradient(270deg, rgba(83, 86, 255, 1) 0%, rgba(103, 198, 227, 1) 65%);
+            background: rgb(104, 188, 110);
+            background: linear-gradient(270deg, rgba(104, 188, 110, 1) 0%, rgba(185, 255, 190, 1) 100%);
 
             & .left_img {
                 width: 528px;
@@ -68,14 +68,25 @@
                     display: grid;
                     place-content: center;
                     border-radius: 62px;
-                    background-color: #3375ff;
-                    color: rgb(255, 255, 255);
+                    background-color: #ffffff;
+                    color: #86cb8a;
                     font-family: "Unbounded Semibold";
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 22px;
                     letter-spacing: 0%;
                     text-align: left;
+                    border: 1px solid #ffffff;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: #428546;
+                        color: #ffffff;
+                    }
+
+                    &:active {
+                        background-color: #68bc6ea7;
+                    }
                 }
             }
         }

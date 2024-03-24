@@ -1,5 +1,6 @@
-import "./style.scss";
 import React, { useState } from "react";
+import DisinfectionLogo from "../../assets/images/disinfectionLogo.png";
+import "./style.scss";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -127,7 +128,10 @@ const Header = () => {
       <div className="header-container">
         <div className="header_weapper">
           <a href="" className="logo">
-            Dizenfeksiya
+            <img
+              src={DisinfectionLogo}
+              alt="Disinfection logo"
+            />
           </a>
 
           <nav className="nav">

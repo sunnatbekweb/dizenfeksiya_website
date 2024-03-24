@@ -1,5 +1,5 @@
-// import React from 'react'
 import { useEffect } from "react";
+import DisinfectionLogo from "../../assets/images/disinfectionLogo.png";
 import Vector from "../../assets/images/Vector-black.png";
 import "./style.scss";
 import AOS from "aos";
@@ -35,19 +35,24 @@ const Footer = () => {
     <footer>
       <div className="container">
         <div className="f-top">
-          <h2 data-aos="fade-right">Dizenfeksiya</h2>
+          <h2 data-aos="fade-right">
+            <img src={DisinfectionLogo} alt="Disinfection logo" />
+          </h2>
 
           <div className="top-right" data-aos="zoom-in-left">
-            <div className="location">
+            <a
+              href="https://maps.app.goo.gl/UccbMo4NsbSYm5hT8"
+              className="location"
+            >
               <i className="bx bx-location-plus"></i>
               <p>{t("address")}</p>
               <img src={Vector} alt="Arrow icon" />
-            </div>
-            <div className="phone">
+            </a>
+            <a href="tel:+998940993434" className="phone">
               <i className="bx bx-phone"></i>
               <p>+998 94 099 34 34</p>
               <img src={Vector} alt="Arrow icon" />
-            </div>
+            </a>
           </div>
         </div>
         <div className="social">

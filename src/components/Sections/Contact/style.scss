@@ -4,11 +4,11 @@
     & .contact_wrapper {
         padding: 32px;
         border-radius: 12px;
-        background-image: url(../../../assets/images/doctor.png), radial-gradient(circle, rgba(83, 86, 255, 1) 0%, rgba(103, 198, 227, 1) 65%);
+        background-image: url(../../../assets/images/doctor.png), radial-gradient(circle, rgba(185, 255, 190, 1) 0%, rgba(104, 188, 110, 1) 100%);
         background-repeat: no-repeat;
         background-position: 85%;
         background-size: contain;
-        background-color: rgb(83, 86, 255);
+        background-color: #68bc6e;
 
         & .form {
             max-width: 456px;
@@ -36,14 +36,30 @@
                     height: 48px;
                     padding: 12px 20px;
                     border-radius: 8px;
-                    background: rgb(242, 242, 242);
+                    background: #f2f2f2;
+
+                    &:focus {
+                        outline-color: #68bc6e;
+                    }
                 }
 
                 & button {
                     border-radius: 8px;
                     padding: 12px 0;
                     color: #fff;
-                    background: #242825;
+                    background: #68BC6E;
+                    border: 2px solid;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background: #ffffff;
+                        border: 2px solid #68BC6E;
+                        color: #68BC6E;
+                    }
+
+                    &:active {
+                        background: #85cb8aa7;
+                    }
                 }
             }
         }
@@ -55,7 +71,7 @@
         & .contact_wrapper {
             padding: 24px;
             background-image: unset;
-            background-image: radial-gradient(circle, rgba(83, 86, 255, 1) 0%, rgba(103, 198, 227, 1) 65%);
+            background: radial-gradient(circle, rgba(185, 255, 190, 1) 0%, rgba(104, 188, 110, 1) 100%);
 
             & .form {
                 max-width: 100%;

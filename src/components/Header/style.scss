@@ -16,10 +16,12 @@ header {
             align-items: center;
 
             & .logo {
-                font-size: 24px;
-                font-family: "Unbounded Bold";
-                text-decoration: none;
-                color: #04009a;
+                width: 120px;
+
+                & img {
+                    width: 100%;
+                    height: 48px;
+                }
             }
 
             & .nav {
@@ -34,7 +36,7 @@ header {
 
                     &--item {
                         &-link {
-                            color: rgb(102, 102, 102);
+                            color: #666666;
                             font-family: "SF Pro Display Regular";
                             font-size: 16px;
                             font-weight: 400;
@@ -42,6 +44,11 @@ header {
                             letter-spacing: 0%;
                             text-transform: capitalize;
                             text-decoration: none;
+                            transition: all 0.2s;
+
+                            &:hover {
+                                color: #68BC6E;
+                            }
                         }
                     }
                 }
@@ -67,13 +74,22 @@ header {
                     display: grid;
                     place-content: center;
                     border-radius: 62px;
-                    background-color: #3375ff;
+                    background-color: #68BC6E;
                     color: rgb(255, 255, 255);
                     font-family: "Unbounded Semibold";
                     font-size: 18px;
                     font-weight: 600;
                     line-height: 22px;
                     text-align: left;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: #428546;
+                    }
+
+                    &:active {
+                        background-color: #68bc6ea7;
+                    }
                 }
             }
 
