@@ -134,7 +134,7 @@ header {
     display: grid;
     place-content: center;
     border-radius: 62px;
-    background-color: #3375ff;
+    background-color: #68BC6E;
     color: #ffffff;
     font-family: "Unbounded Semibold";
     font-size: 18px;
@@ -142,6 +142,15 @@ header {
     line-height: 22px;
     margin: 40px auto;
     display: none;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #428546;
+    }
+
+    &:active {
+        background-color: #68bc6ea7;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
