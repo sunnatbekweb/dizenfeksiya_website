@@ -125,7 +125,7 @@ const Header = () => {
   );
   return (
     <header>
-      <div className="header-container">
+      <div className="container">
         <div className="header_weapper">
           <a href="" className="logo">
             <img
