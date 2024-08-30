@@ -59,15 +59,51 @@ const Footer = () => {
         <div className="social">
           <a href="https://www.facebook.com/OrkinCanada/" target="_blank">
             <span>Facebook</span>
-            <img src={Vector} alt="Arrow icon" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26 26V2M26 2H2M26 2L2 26"
+                stroke="#000000"
+                strokeWidth="3"
+              />
+            </svg>
           </a>
           <a href="https://www.instagram.com/orkincanada/" target="_blank">
             <span>Instagram</span>
-            <img src={Vector} alt="Arrow icon" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26 26V2M26 2H2M26 2L2 26"
+                stroke="#000000"
+                strokeWidth="3"
+              />
+            </svg>
           </a>
           <a href="https://twitter.com/orkincanada/" target="_blank">
             <span>Twitter</span>
-            <img src={Vector} alt="Arrow icon" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M26 26V2M26 2H2M26 2L2 26"
+                stroke="#000000"
+                strokeWidth="3"
+              />
+            </svg>
           </a>
         </div>
       </div>

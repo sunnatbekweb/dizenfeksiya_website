@@ -83,7 +83,6 @@ const Contact = () => {
               className="text_inp"
               type="tel"
               value={phoneNumber}
-              // pattern="^\+998\s\d{2}\s\d{3}\s\d{2}\s\d{2}$"
               placeholder="+998 XX XXX XX XX"
               onChange={handlePhoneNumber}
             />

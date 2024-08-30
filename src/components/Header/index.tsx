@@ -12,8 +12,6 @@ import uzTranslation from "../../../public/locales/uz.json";
 import LanguageDetector from "i18next-browser-languagedetector";
 import Backend from "i18next-http-backend";
 
-type Anchor = "top" | "left" | "bottom" | "right";
-
 i18next
   .use(Backend)
   .use(initReactI18next)
@@ -47,7 +45,7 @@ const Header = () => {
   });
 
   const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
+    (anchor: "right", open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event.type === "keydown" &&
@@ -60,9 +58,9 @@ const Header = () => {
       setState({ ...state, [anchor]: open });
     };
 
-  const list = (anchor: Anchor) => (
+  const list = (anchor: "right") => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 300 }}
+      sx={{width: 320}}
       role="presentation"
       onKeyDown={toggleDrawer(anchor, false)}
     >
@@ -184,11 +182,11 @@ const Header = () => {
           {(["left", "right", "top", "bottom"] as const).map((anchor) => (
             <React.Fragment key={anchor}>
               <Drawer
-                anchor={anchor}
+                anchor={"right"}
                 open={state[anchor]}
-                onClose={toggleDrawer(anchor, false)}
+                onClose={toggleDrawer("right", false)}
               >
-                {list(anchor)}
+                {list("right")}
               </Drawer>
             </React.Fragment>
           ))}

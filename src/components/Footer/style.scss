@@ -1,117 +1,129 @@
 footer {
-    padding: 60px 0;
-    margin-bottom: 40px;
+  padding: 60px 0;
+  margin-bottom: 40px;
 
-    .f-top {
-        display: flex;
-        justify-content: space-around;
+  .f-top {
+    display: flex;
+    justify-content: space-around;
 
-        & h2 {
-            width: 120px;
+    & h2 {
+      width: 120px;
 
-            & img {
-                width: 100%;
-                height: 48px;
-            }
-        }
-
-        & .top-right {
-            & .location {
-                display: flex;
-                align-items: center;
-                column-gap: 16px;
-                margin-bottom: 20px;
-                cursor: pointer;
-
-                & i {
-                    padding: 10px;
-                    border: 1px solid rgb(204, 204, 204);
-                    border-radius: 8px;
-                }
-            }
-
-            & .phone {
-                display: flex;
-                align-items: center;
-                column-gap: 16px;
-                cursor: pointer;
-
-                & i {
-                    padding: 10px;
-                    border: 1px solid rgb(204, 204, 204);
-                    border-radius: 8px;
-                }
-            }
-        }
+      & img {
+        width: 100%;
+        height: 48px;
+      }
     }
 
-    & .social {
+    & .top-right {
+      & .location {
         display: flex;
-        justify-content: space-evenly;
-        row-gap: 16px;
+        align-items: center;
         column-gap: 16px;
-        padding-top: 32px;
-        margin-top: 32px;
-        border-top: 1px solid rgb(204, 204, 204);
+        margin-bottom: 20px;
+        cursor: pointer;
 
-        & a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px;
-            width: 330px;
-            column-gap: 16px;
-            border-radius: 30px;
-            background: rgb(242, 242, 242);
-            transition: all 0.3s ease;
+        & i {
+          padding: 10px;
+          border: 1px solid rgb(204, 204, 204);
+          border-radius: 8px;
         }
+      }
 
-        & a:nth-child(1):hover {
-            background-color: #1877F2;
-            color: #ffffff;
-        }
+      & .phone {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        cursor: pointer;
 
-        & a:nth-child(2):hover {
-            background: #833ab4;
-            background: linear-gradient(to right,
-                    #833ab4, #fd1d1d, #fcb045);
-            color: #ffffff;
+        & i {
+          padding: 10px;
+          border: 1px solid rgb(204, 204, 204);
+          border-radius: 8px;
         }
-
-        & a:nth-child(3):hover {
-            background-color: #00ACEE;
-            color: #ffffff;
-        }
+      }
     }
+  }
+
+  & .social {
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding-top: 32px;
+    margin-top: 32px;
+    border-top: 1px solid rgb(204, 204, 204);
+
+    & a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      width: 330px;
+      column-gap: 16px;
+      border-radius: 30px;
+      background: rgb(242, 242, 242);
+      transition: all 0.3s ease;
+
+      & svg {
+        & path {
+          transition: all 0.3s ease;
+        }
+      }
+
+      &:hover {
+        & svg {
+          & path {
+            stroke: #ffffff;
+          }
+        }
+      }
+    }
+
+    & a:nth-child(1):hover {
+      background-color: #1877f2;
+      color: #ffffff;
+    }
+
+    & a:nth-child(2):hover {
+      background: #833ab4;
+      background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+      color: #ffffff;
+    }
+
+    & a:nth-child(3):hover {
+      background-color: #00acee;
+      color: #ffffff;
+    }
+  }
 }
 
 @media screen and (max-width: 1360px) {
-    footer {
-        & .f-top {
-
-            & h2 {
-                margin-bottom: 32px;
-            }
-        }
+  footer {
+    & .f-top {
+      & h2 {
+        margin-bottom: 32px;
+      }
     }
+  }
 }
 
 @media screen and (max-width: 640px) {
-    footer {
-        & .f-top {
-            flex-direction: column;
+  footer {
+    & .f-top {
+      flex-direction: column;
 
-            & h2 {
-                margin-bottom: 32px;
-            }
-        }
-
-        & .social {
-            flex-direction: column;
-
-            & a {
-                width: 100%;
-            }
-        }
+      & h2 {
+        margin-bottom: 32px;
+      }
     }
+
+    & .social {
+      flex-direction: column;
+
+      & a {
+        width: 100%;
+      }
+    }
+  }
 }
